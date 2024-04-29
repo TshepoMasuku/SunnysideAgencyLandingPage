@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+}
+
+:root {
+    /* Primary Colours */
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+    /* Neutral Colours */
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Other Colours */
+    --moderate-cyan: hsl(167,44%,70%);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* header styles */
+header {
+    height: 75vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.headerContent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0rem;
+}
+
+.logo {
+    height: 3rem;
+    width: 12.5rem;
+    position: absolute;
+    left: 3rem;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--white);
+}
+.logo svg {
+    height: 100%;
+    width: 100%;
+}
+
+nav ul {
+    width: 35vw;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.contactBtn {
+    font-family: 'Fraunces', sans-serif;
+    background-color: var(--white);
+    color: black;
+    padding: 0.7rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+}
+.contactBtn:hover {
+    background-color: var(--dark-grayish-blue);
+    color: var(--white)
+}
+
+.headerTextContainer {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    font-size: 2.25rem;
+    color: var(--white);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Promo Cards styles */
+.promoCardsContainer {
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.promoCard {
+    height: 30rem;
+    width: 50%;
+    position: relative;
+    display: flex;
+} 
+.promoCard-color {
+    background-color: var(--white);
+}
+.promoCard__content {
+    margin-inline: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.promoCard__content-bottom {
+    margin: 2rem 12rem 1rem 12rem;
+}
+
+/* div img, */
+.bottomLayer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.upperLayer {
+    position: absolute;
+    bottom: 0;
+}
+
+.promoCard__header {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--very-dark-desaturated-blue);
+}
+.promoCard__description {
+    margin: 2rem auto;
+    color: var(--dark-grayish-blue);
+}
+
+.promoCard__learnMore {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+    text-underline-offset: 0.5px;
+}
+
+.promoCard__background-green {
+    color: var(--dark-desaturated-cyan);
+}
+.promoCard__background-lightgreen {
+    color: var(--dark-moderate-cyan);
+}
+.promoCard__background-blue {
+    color: var(--very-dark-desaturated-blue);
+}
+.promoCard__background-lightblue {
+    color: var(--dark-blue);
+}
+
+.learnMore-yellow {
+    text-decoration: underline var(--yellow) 0.5rem;
+}
+.learnMore-red {
+    text-decoration: underline var(--soft-red) 0.5rem;
+}
+
+
+/* Testimonials styles */
+.testimoniesContainer {
+    height: fit-content;
+    width: 100vw;
+    margin: 7rem 0;
+}
+
+.testimoniesContainer h2 {
+    margin-top: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Fraunces', sans-serif;
+    letter-spacing: 0.25rem;
+    color: var(--grayish-blue);
+}
+
+.testimonialCardsContainer {
+    height: 25rem;
+    width: 100vw;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonialCard {
+    height: 20rem;
+    width: 20rem;
+    margin: 2rem 1rem;
+}
+.testimonialCard__imageContainer {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.testimonialCard__image {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+}
+.testimonialCard__description {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-blue);
+    color: var(--very-dark-desaturated-blue);
+}
+.testimonialCard__name {
+    font-family: 'Fraunces', sans-serif;
+    text-align: center;
+    color: var(--dark-desaturated-cyan);
+}
+.testimonialCard__title {
+    text-align: center;
+    color: var(--grayish-blue);
+}
+
+
+/* footer styles */
+footer {
+    height: 40rem;
+    width: 100vw;
+    background-color: var(--moderate-cyan);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__imageGallery {
+    height: 20rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.footer__image {
+    height: 100%;
+    width: 25%;
+}
+.footer__imageGallery img {
+    height: 100%;
+    width: 100%;
+}
+
+footer span {
+    color: var(--dark-desaturated-cyan);
+    text-align: center;
+    font-family: Barlow;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 2rem 0 0 0;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+footer ul li {
+    display: inline;
+    margin: 2rem;
+}
+footer ul li a {
+    color: var(--dark-moderate-cyan);
+    text-decoration: none;
+}
+footer ul li a:hover {
+    color: var(--white);
+}
+
+.socials {
+    text-align: center;
+    margin: 2rem;
+}
+.socials a {
+    text-decoration: none;
+}
+.socials svg {
+    margin: 0.25rem;
+    color: var(--dark-moderate-cyan);
+}
+.socials svg path:hover {
+    fill: var(--white);
+    color: var(--white);
+}
