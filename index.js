@@ -4,6 +4,12 @@ window.addEventListener("load", () => {
     loadTestimonialCards();
 })
 
+
+function handleHamburgerMenu(event) {
+    event.preventDefault();
+    console.log('event :>> ', event);
+}
+
 function loadBannerText() {
     const bannerText = "We are creatives";
     const headerText = document.getElementById("headerText");

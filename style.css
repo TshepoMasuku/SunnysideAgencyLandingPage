@@ -87,7 +87,7 @@ nav {
 }
 
 nav ul {
-    width: 35vw;
+    width: 45vw;
     position: absolute;
     right: 0.5rem;
     display: flex;
@@ -111,9 +111,12 @@ nav ul li a {
     border-radius: 2rem;
 }
 .contactBtn:hover {
-    /* background-color: var(--dark-grayish-blue); */
     background-color: rgba(255, 255, 255, 0.250);
     color: var(--white)
+}
+
+.hamburgerMenuIcon {
+    display: none;
 }
 
 .headerTextContainer {
@@ -355,7 +358,25 @@ footer ul li a:hover {
 
 /* Media Queries */
 /* Mobile Breakpoint */
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 699.99px) {
+    nav ul {
+        right: 3rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li {
+        display: none;
+    }
+    .hamburgerMenuIcon {
+        display: block;
+    }
+    .headerTextContainer {
+        top: 20%;
+        left: 20%;
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
     .promoCardsContainer {
         display: flex;
         flex-direction: column;
@@ -413,7 +434,7 @@ footer ul li a:hover {
         margin: 1rem;
     }
 }
-
+/* Mobile Breakpoint */
 @media only screen and (max-width: 600px) {
     .testimoniesContainer {
         margin: 0;
@@ -438,6 +459,15 @@ footer ul li a:hover {
     }
     .testimonialCard__title {
         font-size: 0.7rem;
+    }
+}
+/* Moblie Breakpoint */
+@media only screen and (max-width: 400px) {
+    .headerTextContainer {
+        top: 15%;
+        left: 15%;
+        letter-spacing: 0;
+        font-size: 1rem;
     }
 }
 
