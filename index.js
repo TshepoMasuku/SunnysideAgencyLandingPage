@@ -44,7 +44,10 @@ function loadPromoCards() {
             promoCard_Text.innerHTML = `
                 <h2 class="promoCard__header">${promoCardContentObj[itemID].header}</h2>
                 <p class="promoCard__description">${promoCardContentObj[itemID].description}</p>
-                <a href="#" class="promoCard__learnMore ${promoCardContentObj[itemID].CSSclasses}">Learn more</a>
+                <div class="learnMoreContainer">
+                    <a href="#" class="promoCard__learnMore">Learn More</a>
+                    <div class="promoCard__learnMore--underline ${promoCardContentObj[itemID].CSSclasses}"></div>
+                </div>
             `;
         };
     };
