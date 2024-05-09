@@ -40,7 +40,9 @@ a {
 .center {
     text-align: center;
 }
-
+.hidden {
+    display: none;
+}
 
 /* header styles */
 header {
@@ -119,6 +121,41 @@ nav ul li a {
     display: none;
 }
 
+.modal {
+    height: 34rem;
+    width: 90vw;
+    z-index: 1;
+    position: relative;
+    clip-path: polygon(100% 0%, 94% 8%, 0 8%, 0 100%, 100% 100%);
+    padding-top: 5rem;
+    margin-inline: auto;
+    background-color: var(--white);
+}
+.modal ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal ul li {
+    display: inline;
+    margin-block: 1.75rem;
+}
+.modal ul li a {
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    font-size: 2rem;
+}
+.contactModalBtn {
+    width: 11rem;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--yellow);
+    color: black;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 3rem;
+}
+
 .headerTextContainer {
     position: absolute;
     top: 20%;
@@ -127,7 +164,7 @@ nav ul li a {
     text-transform: uppercase;
     font-family: 'Fraunces', sans-serif;
     font-weight: 900;
-    font-size: 2.25rem;
+    font-size: 3rem;
     color: var(--white);
 }
 
@@ -358,9 +395,18 @@ footer ul li a:hover {
 
 /* Media Queries */
 /* Mobile Breakpoint */
-@media only screen and (max-width: 699.99px) {
+@media only screen and (max-width: 699.98px) {
+    header {
+        height: 100vh;
+    }
+    .logo {
+        left: 2rem;
+    }
+    nav {
+        margin-top: 3rem;
+    }
     nav ul {
-        right: 3rem;
+        right: 2rem;
         display: flex;
         justify-content: flex-end;
     }
@@ -371,10 +417,9 @@ footer ul li a:hover {
         display: block;
     }
     .headerTextContainer {
-        top: 20%;
-        left: 20%;
+        left: 15%;
         letter-spacing: 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .promoCardsContainer {
@@ -461,13 +506,21 @@ footer ul li a:hover {
         font-size: 0.7rem;
     }
 }
+
 /* Moblie Breakpoint */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .headerTextContainer {
-        top: 15%;
-        left: 15%;
-        letter-spacing: 0;
+        left: 10%;
         font-size: 1rem;
+    }
+}
+/* Medium Breakpoint */
+@media only screen and (min-width: 700px) {
+    .headerTextContainer {
+        font-size: 2rem;
+    }
+    .modal{
+        display: none;
     }
 }
 
@@ -486,7 +539,6 @@ footer ul li a:hover {
     .promoCard__content-bottom {
         margin: 2rem 10rem 2rem 10rem;
     }
-
     .footer__imageGallery {
         height: 75%;
     }

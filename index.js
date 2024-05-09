@@ -1,13 +1,16 @@
-window.addEventListener("load", () => {
+window.addEventListener(("load"), () => {
     loadBannerText();
     loadPromoCards();
     loadTestimonialCards();
 })
 
 
-function handleHamburgerMenu(event) {
-    event.preventDefault();
-    console.log('event :>> ', event);
+function handleHamburgerMenu() {
+    const modal = document.getElementById("modal");
+    modal.classList.toggle('hidden');
+
+    const headerText = document.getElementById("headerText");
+    headerText.classList.toggle('hidden');
 }
 
 function loadBannerText() {
